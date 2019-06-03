@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "rails", "~> 5.2.3"
 gem "sqlite3"
-gem "puma", git: 'https://github.com/eric-norcross/puma.git', branch: 'chrome_70_ssl_curve_compatiblity'
+gem "puma", git: "https://github.com/eric-norcross/puma.git", branch: "chrome_70_ssl_curve_compatiblity"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 gem "devise"
@@ -12,6 +12,7 @@ gem "omniauth-google-oauth2"
 gem "omniauth-facebook"
 gem "figaro"
 gem "letter_opener", :group => :development
+gem "activity_notification"
 gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"

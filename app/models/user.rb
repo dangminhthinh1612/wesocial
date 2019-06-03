@@ -18,6 +18,8 @@ class User < ApplicationRecord
   has_many :chatrooms, through: :chatroom_users
   has_many :messages
 
+  acts_as_target
+
   def self.new_with_session params, session
     super.tap do |user|
       if data = session["devise.facebook_data"] &&
