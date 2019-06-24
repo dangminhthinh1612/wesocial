@@ -438,14 +438,13 @@
             </div>
           </div>
         </div>
-        <a href="02-ProfilePage.html" class="author-name fn">
+        <%= link_to user_path(current_user), class: "author-name fn" do %>
           <div class="author-title">
-            James Spiegel <svg class="olymp-dropdown-arrow-icon">
+            <%= current_user.name %><svg class="olymp-dropdown-arrow-icon">
               <use xlink:href="/assets/svg-icons/sprites/icons.svg#olymp-dropdown-arrow-icon"></use>
             </svg>
           </div>
-          <span class="author-subtitle">SPACE COWBOY</span>
-        </a>
+        <% end %>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@
                   <% else %>
                     <%= I18n.t "public_group" %>
                   <% end %>
-                    |  Thành viên: ...
+                    |  Thành viên: <%= @group.users.size %>
                 </div>
               </div>
             </div>
@@ -36,7 +36,7 @@
                     <%= link_to "#{I18n.t "videos"}", "#" %>
                   </li>
                   <li>
-                    <%= link_to "#{I18n.t "statistics"}", "#" %>
+                    <%= link_to "#{I18n.t "statistics"}", statistics_group_path(@group) %>
                   </li>
                 </ul>
               </div>

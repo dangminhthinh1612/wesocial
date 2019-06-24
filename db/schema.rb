@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_14_130226) do
+ActiveRecord::Schema.define(version: 2019_06_23_020610) do
 
   create_table "chatroom_users", force: :cascade do |t|
     t.integer "user_id"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_130226) do
   create_table "group_users", force: :cascade do |t|
     t.integer "user_id"
     t.integer "group_id"
-    t.string "role"
+    t.integer "role", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_group_users_on_group_id"
@@ -103,15 +103,6 @@ ActiveRecord::Schema.define(version: 2019_06_14_130226) do
     t.datetime "updated_at", null: false
     t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
-  end
-
-  create_table "scrapes", force: :cascade do |t|
-    t.string "url"
-    t.string "title"
-    t.text "description"
-    t.text "images"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "user_posts", force: :cascade do |t|

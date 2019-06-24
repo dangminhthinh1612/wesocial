@@ -18,6 +18,7 @@ class User < ApplicationRecord
   has_many :chatroom_users
   has_many :chatrooms, through: :chatroom_users
   has_many :messages
+  has_many :comments, dependent: :destroy
 
   def self.new_with_session params, session
     super.tap do |user|

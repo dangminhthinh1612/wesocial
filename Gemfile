@@ -22,9 +22,6 @@ gem "rails_autolink", "~> 1.1", ">= 1.1.6"
 gem "grabbit"
 gem "acts_as_votable"
 
-
-
-
 gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do

@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   before_action :authenticate_user!
   def home
     @user_post = UserPost.new
-    @user_posts = UserPost.order(created_at: :DESC)
+    @user_posts = UserPost.order(created_at: "DESC")
   end
 
   private
@@ -19,4 +19,4 @@ class StaticPagesController < ApplicationController
     @privacy_options = Privacy.pluck :privacy
   end
 end
-	
+
